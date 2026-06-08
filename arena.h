@@ -1,5 +1,6 @@
 #ifndef ARENA_H
 #define ARENA_H
+#include<stddef.h>
 
 typedef struct
 {
@@ -9,5 +10,6 @@ typedef struct
 }Arena;
 
 void arena_init(Arena *a, size_t size);
-
+void* arena_alloc(Arena *from, size_t size);
+void arena_destroy(Arena *a);
 #endif
